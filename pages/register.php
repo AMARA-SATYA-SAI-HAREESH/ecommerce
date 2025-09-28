@@ -92,6 +92,14 @@ if (isset($_POST['register'])) {
             text-align: center;
             margin-top: 10px;
         }
+        p{
+            text-align: center;
+            /* margin-top: 15px; */
+        }
+        a{
+            text-decoration: none;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
@@ -103,6 +111,7 @@ if (isset($_POST['register'])) {
             <label>Password:</label>
             <input type="password" name="password" required>
             <button type="submit" name="register">Register</button>
+            <p>already have an account <a href="pages/login.php">Login</a></p>
         </form>
         <?php if (isset($error_message)): ?>
             <p class="error-message"><?= htmlspecialchars($error_message); ?></p>

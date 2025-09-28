@@ -193,8 +193,8 @@ $wishlist_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     <?php endif; ?>
         <div class="top-bar wishlist-header">
-        <a href="https://localhost/ecommerce/index.php" class="back-button">⬅ Back to Shop</a>
-        <a href="https://localhost/ecommerce/pages/cart.php" class="btn">🛒 Go to Cart</a>
+        <a href="index.php" class="back-button">⬅ Back to Shop</a>
+        <a href="pages/cart.php" class="btn">🛒 Go to Cart</a>
          
     </div>
 

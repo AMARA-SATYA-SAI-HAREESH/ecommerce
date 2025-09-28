@@ -88,6 +88,14 @@ if (isset($_POST['login'])) {
             text-align: center;
             margin-top: 10px;
         }
+                p{
+            text-align: center;
+            /* margin-top: 15px; */
+        }
+        a{
+            text-decoration: none;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
@@ -99,6 +107,7 @@ if (isset($_POST['login'])) {
             <label>Password:</label>
             <input type="password" name="password" required>
             <button type="submit" name="login">Login</button>
+            <p>create a new account <a href="pages/register.php">Register</a></p>
         </form>
         <?php if (isset($error_message)): ?>
             <p class="error-message"><?= htmlspecialchars($error_message); ?></p>

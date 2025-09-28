@@ -39,6 +39,10 @@ if (isset($_POST['add_to_cart'])) {
         header("Location: wishlist.php");
         exit();
     }
+
+    // ✅ Fix: Always redirect to avoid duplicate POST on refresh
+    header("Location: cart.php");
+    exit();
 }
 
 
@@ -242,7 +246,13 @@ $total_cost = 0;
         <?php endif; ?>
         <div class="cart-actions">
             <a href="../index.php">Back to Shop</a>
-            <a href="checkout.php">Proceed to Checkout</a>
+        <!-- <form method="POST" action="checkout.php" style="display:inline;">
+            <button type="submit" name="place_order">Proceed to Checkout</button>
+        </form> -->
+            <a href="checkout.php" class="btn btn-success">Proceed to Checkout</a>
+
+
+
         </div>
     </div>
 </body>
