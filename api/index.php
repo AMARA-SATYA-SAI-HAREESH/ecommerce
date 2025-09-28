@@ -102,7 +102,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Store</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -195,7 +195,7 @@ if (!isset($_SESSION['user_id'])) {
             <a href="pages/login.php">Login</a>
             <a href="pages/register.php">Register</a>
             <a href="pages/cart.php" class="cart-link">
-                <img src="images/cart-icon.png" alt="Cart" class="cart-icon"> Cart
+                <img src="../images/cart-icon.png" alt="Cart" class="cart-icon"> Cart
             </a>
             <a href="pages/wishlist.php">Wishlist</a>
             <a href="pages/profile.php">Profile</a>
@@ -233,7 +233,7 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="product">
                         <a href="pages/product.php?id=<?= $product['id']; ?>" style="text-decoration:none; color:inherit;">
                             <?php if (!empty($product['image'])) : ?>
-                                <img src="images/<?= htmlspecialchars($product['image']); ?>" 
+                                <img src="../images/<?= htmlspecialchars($product['image']); ?>" 
                                      alt="<?= htmlspecialchars($product['name']); ?>" 
                                      class="product-image">
                             <?php endif; ?>
@@ -284,7 +284,7 @@ if (!isset($_SESSION['user_id'])) {
                     <?php foreach ($topRated as $product): ?>
                         <div class="scroll-card">
                             <span class="badge-top">⭐ Top Rated</span>
-                            <img src="images/<?= htmlspecialchars($product['image']); ?>" 
+                            <img src="../images/<?= htmlspecialchars($product['image']); ?>" 
                                  alt="<?= htmlspecialchars($product['name']); ?>">
                             <h4><?= htmlspecialchars($product['name']); ?></h4>
                             <div class="stars">
@@ -302,7 +302,7 @@ if (!isset($_SESSION['user_id'])) {
                                     <input type="hidden" name="product_id" value="<?= $product['id']; ?>">
                                     <button type="submit" name="add_to_cart">🛒</button>
                                 </form>
-                                <button type="button" onclick="quickView('<?= addslashes($product['name']); ?>','<?= addslashes($product['description']); ?>','images/<?= htmlspecialchars($product['image']); ?>','<?= number_format($product['price'],2); ?>')">👁</button>
+                                <button type="button" onclick="quickView('<?= addslashes($product['name']); ?>','<?= addslashes($product['description']); ?>','../images/<?= htmlspecialchars($product['image']); ?>','<?= number_format($product['price'],2); ?>')">👁</button>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -320,7 +320,7 @@ if (!isset($_SESSION['user_id'])) {
                     <?php foreach ($trending as $product): ?>
                         <div class="trend-card">
                             <span class="badge-trend">🔥 Trending</span>
-                            <img src="images/<?= htmlspecialchars($product['image']); ?>" 
+                            <img src="../images/<?= htmlspecialchars($product['image']); ?>" 
                                  alt="<?= htmlspecialchars($product['name']); ?>">
                             <h4><?= htmlspecialchars($product['name']); ?></h4>
                             <p>$<?= number_format($product['price'], 2); ?></p>
@@ -339,7 +339,7 @@ if (!isset($_SESSION['user_id'])) {
                                     <input type="hidden" name="product_id" value="<?= $product['id']; ?>">
                                     <button type="submit" name="add_to_cart">🛒</button>
                                 </form>
-                                <button type="button" onclick="quickView('<?= addslashes($product['name']); ?>','<?= addslashes($product['description']); ?>','images/<?= htmlspecialchars($product['image']); ?>','<?= number_format($product['price'],2); ?>')">👁</button>
+                                <button type="button" onclick="quickView('<?= addslashes($product['name']); ?>','<?= addslashes($product['description']); ?>','../images/<?= htmlspecialchars($product['image']); ?>','<?= number_format($product['price'],2); ?>')">👁</button>
                             </div>
                         </div>
                     <?php endforeach; ?>

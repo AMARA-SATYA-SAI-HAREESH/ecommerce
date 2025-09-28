@@ -219,7 +219,7 @@ $total_cost = 0;
                 $total_cost += $product['price'] * $quantity; // Add product price * quantity to total cost
 
                 echo "<div class='cart-item'>
-                        <img src='../images/{$product['image']}' alt='{$product['name']}' class='item-image'>
+                        <img src='../../images/{$product['image']}' alt='{$product['name']}' class='item-image'>
                         <div class='item-details'>
                             <div class='item-name'>{$product['name']}</div>
                             <div class='item-price'>\${$product['price']} x $quantity</div>

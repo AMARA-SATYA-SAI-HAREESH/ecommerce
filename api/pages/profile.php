@@ -134,7 +134,7 @@ if ($conn->query("SHOW TABLES LIKE 'reviews'")->rowCount() > 0) {
                              data-price="<?= $order['price']; ?>"
                              data-date="<?= $order['created_at']; ?>">
                             <div class="card" onclick="window.location='product.php?id=<?= $order['product_id']; ?>'">
-                                <img src="../images/<?= htmlspecialchars($order['image']); ?>" class="card-img-top">
+                                <img src="../../images/<?= htmlspecialchars($order['image']); ?>" class="card-img-top">
                                 <div class="card-body">
                                     <h5><?= htmlspecialchars($order['name']); ?></h5>
                                     <p>$<?= number_format($order['price'], 2); ?> × <?= $order['quantity']; ?></p>
@@ -156,7 +156,7 @@ if ($conn->query("SHOW TABLES LIKE 'reviews'")->rowCount() > 0) {
                              data-name="<?= strtolower($item['name']); ?>" 
                              data-price="<?= $item['price']; ?>">
                             <div class="card" onclick="window.location='product.php?id=<?= $item['product_id']; ?>'">
-                                <img src="../images/<?= htmlspecialchars($item['image']); ?>" class="card-img-top">
+                                <img src="../../images/<?= htmlspecialchars($item['image']); ?>" class="card-img-top">
                                 <div class="card-body">
                                     <h5><?= htmlspecialchars($item['name']); ?></h5>
                                     <p>$<?= number_format($item['price'], 2); ?></p>
@@ -178,7 +178,7 @@ if ($conn->query("SHOW TABLES LIKE 'reviews'")->rowCount() > 0) {
                              data-rating="<?= $review['rating']; ?>"
                              data-date="<?= $review['created_at']; ?>">
                             <div class="card" onclick="window.location='product.php?id=<?= $review['product_id']; ?>'">
-                                <img src="../images/<?= htmlspecialchars($review['image']); ?>" class="card-img-top">
+                                <img src="../../images/<?= htmlspecialchars($review['image']); ?>" class="card-img-top">
                                 <div class="card-body">
                                     <h5><?= htmlspecialchars($review['name']); ?></h5>
                                     <p>⭐ <?= $review['rating']; ?>/5</p>

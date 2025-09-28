@@ -169,7 +169,7 @@ $wishlist_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="product">
         <h3><?= htmlspecialchars($item['name']); ?></h3>
         <p>Price: $<?= number_format($item['price'], 2); ?></p>
-        <img src="../images/<?= htmlspecialchars($item['image']); ?>" width="100">
+        <img src="../../images/<?= htmlspecialchars($item['image']); ?>" width="100">
 
         <div class="button-group">
             <!-- Add to Cart -->
@@ -193,8 +193,8 @@ $wishlist_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     <?php endif; ?>
         <div class="top-bar wishlist-header">
-        <a href="index.php" class="back-button">⬅ Back to Shop</a>
-        <a href="pages/cart.php" class="btn">🛒 Go to Cart</a>
+        <a href="../index.php" class="back-button">⬅ Back to Shop</a>
+        <a href="cart.php" class="btn">🛒 Go to Cart</a>
          
     </div>
 

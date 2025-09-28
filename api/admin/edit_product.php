@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Handle image upload
     if (!empty($_FILES['image']['name'])) {
-        $targetDir = "../images/";
+        $targetDir = "../../images/";
         if (!is_dir($targetDir)) {
             mkdir($targetDir, 0777, true);
         }
@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <label>Current Image:</label><br>
             <?php if (!empty($product['image'])): ?>
-                <img src="../images/<?= htmlspecialchars($product['image']); ?>" alt="Product Image">
+                <img src="../../images/<?= htmlspecialchars($product['image']); ?>" alt="Product Image">
             <?php else: ?>
                 <p>No image available</p>
             <?php endif; ?>

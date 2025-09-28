@@ -111,7 +111,7 @@ if (isset($_POST['register'])) {
             <label>Password:</label>
             <input type="password" name="password" required>
             <button type="submit" name="register">Register</button>
-            <p>already have an account <a href="pages/login.php">Login</a></p>
+            <p>already have an account <a href="login.php">Login</a></p>
         </form>
         <?php if (isset($error_message)): ?>
             <p class="error-message"><?= htmlspecialchars($error_message); ?></p>

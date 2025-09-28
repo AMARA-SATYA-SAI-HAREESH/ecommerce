@@ -110,7 +110,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?= htmlspecialchars($product['name']); ?></td>
                 <td>$<?= number_format($product['price'], 2); ?></td>
                 <td><?= htmlspecialchars($product['description']); ?></td>
-                <td><img src="../images/<?= htmlspecialchars($product['image']); ?>" alt="Product Image"></td>
+                <td><img src="../../images/<?= htmlspecialchars($product['image']); ?>" alt="Product Image"></td>
                 <td class="actions">
                     <a href="edit_product.php?id=<?= $product['id']; ?>">Edit</a>
                     <a href="delete_product.php?id=<?= $product['id']; ?>" onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>

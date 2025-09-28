@@ -11,7 +11,7 @@ if (isset($_POST['add_product'])) {
     $price = $_POST['price'];
     $description = $_POST['description'];
     $image = $_FILES['image']['name'];
-    move_uploaded_file($_FILES['image']['tmp_name'], "../images/$image");
+    move_uploaded_file($_FILES['image']['tmp_name'], "../../images/$image");
 
     $stmt = $conn->prepare("INSERT INTO products (name, price, description, image) VALUES (?, ?, ?, ?)");
     $stmt->execute([$name, $price, $description, $image]);

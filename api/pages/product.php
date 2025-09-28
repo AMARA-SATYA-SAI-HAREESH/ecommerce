@@ -147,8 +147,8 @@ $reviews = $reviewStmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($product['name']) ?> - Product Details</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/product.css?v=6"> <!-- cache bust -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/product.css?v=6"> <!-- cache bust -->
     <style>
         /* ⭐ Scoped styling for edit review stars */
         .edit-review-form .star-rating {
@@ -374,15 +374,15 @@ $reviews = $reviewStmt->fetchAll(PDO::FETCH_ASSOC);
     <!-- NEW: Image Gallery Implementation -->
     <div class="product-image-container">
         <?php if (!empty($productImages)): ?>
-            <img src="../images/<?= htmlspecialchars($productImages[0]) ?>" 
+            <img src="../../images/<?= htmlspecialchars($productImages[0]) ?>" 
                  alt="<?= htmlspecialchars($product['name']) ?>" 
                  class="main-product-image" id="mainProductImage"
                  data-image-count="<?= count($productImages) ?>"
-                 onerror="this.onerror=null; this.src='../images/placeholder.jpg';">
+                 onerror="this.onerror=null; this.src='../../images/placeholder.jpg';">
                  
 
         <?php else: ?>
-            <img src="../images/placeholder.jpg" 
+            <img src="../../images/placeholder.jpg" 
                  alt="<?= htmlspecialchars($product['name']) ?>" 
                  class="main-product-image">
         <?php endif; ?>
@@ -426,7 +426,7 @@ $reviews = $reviewStmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="image-modal" id="imageModal">
     <div class="modal-close" id="modalClose">×</div>
     <div class="modal-content">
-        <img class="modal-image" id="modalImage" src="" alt="">
+        <img class="modal-image" id="modalImage" src="../" alt="">
         <div class="modal-counter" id="modalCounter"></div>
     </div>
     <div class="modal-nav">
@@ -437,7 +437,7 @@ $reviews = $reviewStmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="modal-thumbnails">
             <?php foreach ($productImages as $index => $image): ?>
                 <?php if ($tableExists || $index === 0): ?>
-                    <img src="../images/<?= htmlspecialchars($image) ?>" 
+                    <img src="../../images/<?= htmlspecialchars($image) ?>" 
                          alt="Thumbnail <?= $index + 1 ?>"
                          class="modal-thumbnail"
                          data-index="<?= $index ?>"
@@ -513,7 +513,7 @@ $reviews = $reviewStmt->fetchAll(PDO::FETCH_ASSOC);
                     <p><?= htmlspecialchars($rev['review']) ?></p>
 
                     <?php if (!empty($rev['image_path'])): ?>
-                        <img src="../<?= htmlspecialchars($rev['image_path']) ?>" class="review-photo" alt="Review photo">
+                        <img src="../<?= htmlspecialchars($rev['image_path']) ?>" class="review-photo" alt="">
                     <?php endif; ?>
 
                     <small><?= $rev['created_at'] ?></small>
